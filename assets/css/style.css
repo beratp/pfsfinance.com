@@ -1172,4 +1172,54 @@ button:hover {
   }
 }
 
+/* Disclaimer Section */
+.disclaimer-section {
+  background: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.disclaimer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.disclaimer-content h3 {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.disclaimer-content p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+.disclaimer-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.disclaimer-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for Disclaimer */
+@media (max-width: 768px) {
+  .disclaimer-content {
+    padding: 0 1rem;
+  }
+  
+  .disclaimer-content p {
+    font-size: 0.85rem;
+  }
+}
+
 
