@@ -7,6 +7,15 @@ header { position:sticky; top:0; background:#fff; border-bottom:1px solid #eee; 
 header .bar { display:flex; align-items:center; justify-content:space-between; padding:0.9rem 0; gap:1rem; }
 .brand { display:flex; align-items:center; gap:.65rem; font-weight:700; font-size:1.1rem; }
 .brand img { height:40px; width:auto; border-radius:8px; }
+.logo { 
+  height: 50px; 
+  width: auto; 
+  display: block; 
+  transition: transform 0.2s ease;
+}
+.brand a:hover .logo {
+  transform: scale(1.05);
+}
 nav a { text-decoration:none; color:#333; padding:.45rem .6rem; border-radius:10px; margin:0 .2rem; }
 nav a:hover { background:#f4f4f4; }
 main { padding:2rem 0 3rem; line-height:1.65; }
