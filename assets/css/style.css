@@ -1395,4 +1395,174 @@ button:hover {
   }
 }
 
+/* Pie Chart Styling */
+.pie-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.pie-chart {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #2E86AB 0deg 221.76deg,
+    #A23B72 221.76deg 255.96deg,
+    #F18F01 255.96deg 282.24deg,
+    #C73E1D 282.24deg 306deg,
+    #6A994E 306deg 327.6deg,
+    #BC4749 327.6deg 346.5deg,
+    #8B5A3C 346.5deg 360deg
+  );
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.pie-chart:hover {
+  transform: scale(1.05);
+}
+
+.pie-slice {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  transform: rotate(var(--start));
+}
+
+.pie-slice::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color);
+  border-radius: 50%;
+  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  transform: rotate(calc(var(--percentage) * 3.6deg));
+}
+
+.slice-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(calc(var(--start) + var(--percentage) * 1.8deg));
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pie-chart:hover .slice-label {
+  opacity: 1;
+}
+
+/* Pie Chart Legend */
+.pie-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  width: 100%;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.legend-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.legend-text {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design for Pie Chart */
+@media (max-width: 768px) {
+  .pie-chart {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .pie-legend {
+    grid-template-columns: 1fr;
+  }
+  
+  .slice-label {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pie-chart {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .slice-label {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+/* Portfolio Visualization - Side by Side Layout */
+.portfolio-visualization {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+.portfolio-breakdown,
+.geographic-distribution {
+  width: 100%;
+}
+
+/* Responsive design for portfolio visualization */
+@media (max-width: 1024px) {
+  .portfolio-visualization {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-visualization {
+    gap: 2rem;
+  }
+}
+
 
