@@ -1420,53 +1420,49 @@ button:hover {
   );
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pie-chart:hover {
   transform: scale(1.05);
 }
 
-.pie-slice {
-  position: absolute;
+.pie-chart-inner {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%);
-  transform: rotate(var(--start));
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.pie-slice::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--color);
+.pie-center {
+  background: white;
   border-radius: 50%;
-  clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 100%, 50% 100%);
-  transform: rotate(calc(var(--percentage) * 3.6deg));
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
-.slice-label {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(calc(var(--start) + var(--percentage) * 1.8deg));
-  background: rgba(255, 255, 255, 0.95);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+.total-amount {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.total-label {
   font-size: 0.8rem;
-  font-weight: 600;
-  color: #333;
-  white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.pie-chart:hover .slice-label {
-  opacity: 1;
+  color: #6c757d;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* Pie Chart Legend */
@@ -1519,9 +1515,17 @@ button:hover {
     grid-template-columns: 1fr;
   }
   
-  .slice-label {
+  .pie-center {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .total-amount {
+    font-size: 1rem;
+  }
+  
+  .total-label {
     font-size: 0.7rem;
-    padding: 0.4rem 0.8rem;
   }
 }
 
@@ -1531,9 +1535,17 @@ button:hover {
     height: 200px;
   }
   
-  .slice-label {
+  .pie-center {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .total-amount {
+    font-size: 0.9rem;
+  }
+  
+  .total-label {
     font-size: 0.6rem;
-    padding: 0.3rem 0.6rem;
   }
 }
 
@@ -1562,6 +1574,65 @@ button:hover {
 @media (max-width: 768px) {
   .portfolio-visualization {
     gap: 2rem;
+  }
+}
+
+/* Transaction Types Grid - 3 columns in single row */
+.transaction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.transaction-card {
+  background: white;
+  border-radius: 14px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.transaction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
+}
+
+.transaction-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.transaction-card p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.transaction-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.feature {
+  background: #f8f9fa;
+  color: #495057;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid #e9ecef;
+}
+
+/* Responsive design for transaction grid */
+@media (max-width: 768px) {
+  .transaction-grid {
+    grid-template-columns: 1fr;
   }
 }
 
