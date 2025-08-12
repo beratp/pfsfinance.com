@@ -982,4 +982,48 @@ button:hover {
   }
 }
 
+/* Company Overview Section */
+.company-overview {
+  padding: 4rem 0;
+  background: white;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.overview-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 4px solid #007bff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.overview-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.overview-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design for Company Overview */
+@media (max-width: 768px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
