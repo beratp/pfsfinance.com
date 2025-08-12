@@ -631,46 +631,7 @@ button:hover {
   margin: 0;
 }
 
-/* Contact Information */
-.contact-info {
-  margin: 3rem 0;
-}
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.contact-card {
-  background: #f8f9fa;
-  border: 1px solid #eee;
-  border-radius: 12px;
-  padding: 2rem;
-}
-
-.contact-card h3 {
-  color: #2c3e50;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #007bff;
-  padding-bottom: 0.5rem;
-}
-
-.contact-card p {
-  color: #666;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.contact-card a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact-card a:hover {
-  text-decoration: underline;
-}
 
 /* Responsive Design for Corporate Profile */
 @media (max-width: 768px) {
@@ -1155,6 +1116,58 @@ button:hover {
   }
   
   .industry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Office Locations Section */
+.office-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.office-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.office-card:hover {
+  transform: translateY(-5px);
+}
+
+.office-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+}
+
+.office-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.office-contact {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.office-contact p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design for Office Locations */
+@media (max-width: 768px) {
+  .office-grid {
     grid-template-columns: 1fr;
   }
 }
