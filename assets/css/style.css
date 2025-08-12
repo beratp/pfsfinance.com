@@ -1026,4 +1026,137 @@ button:hover {
   }
 }
 
+/* Company Description Section */
+.company-description {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.company-description h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+
+.company-description p {
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.description-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.description-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.description-card:hover {
+  transform: translateY(-5px);
+}
+
+.description-card h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.description-card p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+}
+
+/* Industry Showcase Section */
+.industry-showcase {
+  padding: 4rem 0;
+  background: white;
+}
+
+.industry-showcase h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.industry-showcase p {
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.showcase-item {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.showcase-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.showcase-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.showcase-item h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.showcase-item p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+}
+
+/* Update Industry Grid for 4 cards */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Design Updates */
+@media (max-width: 768px) {
+  .description-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .industry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
