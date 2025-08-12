@@ -1371,4 +1371,28 @@ button:hover {
   }
 }
 
+/* Key Services Grid - 3 columns in single row */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+/* Risk Management Grid - 3 columns in single row */
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .services-grid,
+  .risk-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
