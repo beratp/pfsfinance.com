@@ -2,7 +2,56 @@
 :root { --maxw: 1400px; --muted:#666; }
 * { box-sizing: border-box; }
 body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#111; }
-.container { width:min(100% - 2rem, var(--maxw)); margin-inline:auto; }
+.container { 
+  width: min(100% - 3rem, var(--maxw)); 
+  margin-inline: auto; 
+  padding: 0 1.5rem;
+}
+
+/* Ensure comfortable reading widths for text content */
+.article,
+.company-overview,
+.company-description,
+.key-services,
+.performance-data,
+.risk-management,
+.portfolio-overview,
+.mission-content,
+.impact-stats,
+.contact-content {
+  max-width: none;
+  width: 100%;
+}
+
+/* Add comfortable spacing for text sections */
+.article h1,
+.article h2,
+.company-overview h2,
+.company-description h2,
+.key-services h2,
+.performance-data h2,
+.risk-management h2,
+.portfolio-overview h2,
+.mission-content h2,
+.impact-stats h2,
+.contact-content h2 {
+  margin-bottom: 2.5rem;
+  margin-top: 3rem;
+}
+
+.article p,
+.company-overview p,
+.company-description p,
+.key-services p,
+.performance-data p,
+.risk-management p,
+.portfolio-overview p,
+.mission-content p,
+.impact-stats p,
+.contact-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
 header { position:sticky; top:0; background:#fff; border-bottom:1px solid #eee; z-index:10; }
 header .bar { display:flex; align-items:center; justify-content:space-between; padding:0.9rem 0; gap:1rem; }
 .brand { display:flex; align-items:center; gap:.65rem; font-weight:700; font-size:1.1rem; }
@@ -18,7 +67,72 @@ header .bar { display:flex; align-items:center; justify-content:space-between; p
 }
 nav a { text-decoration:none; color:#333; padding:.45rem .6rem; border-radius:10px; margin:0 .2rem; }
 nav a:hover { background:#f4f4f4; }
-main { padding:2rem 0 3rem; line-height:1.65; }
+main { padding:3rem 0 4rem; line-height:1.65; }
+/* Standardize main section spacing for all pages */
+.hero,
+.company-overview,
+.company-description,
+.industry-expertise,
+.performance-metrics,
+.overview-section,
+.key-services,
+.performance-data,
+.risk-management,
+.portfolio-overview,
+.industry-breakdown,
+.geographic-distribution,
+.transaction-types,
+.portfolio-performance,
+.mission-content,
+.impact-stats,
+.client-network,
+.industry-impact,
+.geographic-impact,
+.sustainable-impact,
+.company-overview,
+.timeline,
+.growth-metrics,
+.client-development,
+.industry-expertise,
+.future-vision,
+.contact-content,
+.office-locations {
+  padding: 4rem 0;
+}
+
+/* Ensure consistent card spacing */
+.card,
+.metric-card,
+.overview-card,
+.description-card,
+.service-card,
+.risk-card,
+.stat-card,
+.industry-card,
+.breakdown-item,
+.geo-item,
+.office-card,
+.showcase-item {
+  padding: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Standardize grid gaps for consistent spacing */
+.grid,
+.metrics-grid,
+.overview-grid,
+.description-grid,
+.services-grid,
+.risk-grid,
+.industry-grid,
+.breakdown-grid,
+.geo-grid,
+.office-grid,
+.showcase-grid {
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
 /* Old hero styles removed - new styles below */
 /* Old grid and card styles removed - new styles below */
 .footer { border-top:1px solid #eee; color:var(--muted); padding:1rem 0; }
@@ -1202,19 +1316,19 @@ button:hover {
 .disclaimer-section {
   background: #f8f9fa;
   border-top: 1px solid #e9ecef;
-  padding: 2rem 0;
-  margin-top: 3rem;
+  padding: 3rem 0;
+  margin-top: 4rem;
 }
 
 .disclaimer-content {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .disclaimer-content h3 {
   color: #6c757d;
   font-size: 1.1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   font-weight: 600;
 }
@@ -1222,9 +1336,18 @@ button:hover {
 .disclaimer-content p {
   color: #6c757d;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
   text-align: center;
+  opacity: 0.8;
+}
+
+/* Footer spacing */
+.footer {
+  border-top: 1px solid #eee;
+  color: var(--muted);
+  padding: 2rem 0;
+  margin-top: 2rem;
 }
 
 .disclaimer-link {
